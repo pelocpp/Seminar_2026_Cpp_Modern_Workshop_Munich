@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{7B6D68B9-7F45-4160-BC1C-9000B1BDFDC7}</ProjectGuid>
+    <RootNamespace>GeneralSnippets</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Cpp_Modern_Workshop</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <BuildStlModules>true</BuildStlModules>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Accumulate\Accumulate.cpp" />
+    <ClCompile Include="Accumulate\Module_Accumulate.ixx" />
+    <ClCompile Include="Algorithms\Algorithms.cpp" />
+    <ClCompile Include="Algorithms\Module_Algorithms.ixx" />
+    <ClCompile Include="Allocator\Allocator.cpp" />
+    <ClCompile Include="Allocator\Module_Allocator.ixx" />
+    <ClCompile Include="Any\Module_Any.ixx" />
+    <ClCompile Include="Any\Any.cpp" />
+    <ClCompile Include="ArgumentDependentNameLookup\ArgumentDependentNameLookup.cpp" />
+    <ClCompile Include="ArgumentDependentNameLookup\Module_ArgumentDependentNameLookup.ixx" />
+    <ClCompile Include="ArrayDecay\ArrayDecay.cpp" />
+    <ClCompile Include="ArrayDecay\Module_Array_Decay.ixx" />
+    <ClCompile Include="Array\Array.cpp" />
+    <ClCompile Include="Array\Module_Array.ixx" />
+    <ClCompile Include="Attributes\Attributes.cpp" />
+    <ClCompile Include="Attributes\Module_Attributes.ixx" />
+    <ClCompile Include="Auto\Auto.cpp" />
+    <ClCompile Include="Auto\Module_Auto.ixx" />
+    <ClCompile Include="BackInserter\BackInserter.cpp" />
+    <ClCompile Include="BackInserter\Module_BackInserter.ixx" />
+    <ClCompile Include="Bind\Bind.cpp" />
+    <ClCompile Include="Bind\Module_Bind.ixx" />
+    <ClCompile Include="BraceInitialization\BraceInitialization.cpp" />
+    <ClCompile Include="BraceInitialization\Module_BraceInitialization.ixx" />
+    <ClCompile Include="Casts\Casts.cpp" />
+    <ClCompile Include="Casts\Module_Casts.ixx" />
+    <ClCompile Include="CommonType\CommonType.cpp" />
+    <ClCompile Include="CommonType\Module_CommonType.ixx" />
+    <ClCompile Include="ConceptsRequiresClasses\ConceptsRequiresClasses.cpp" />
+    <ClCompile Include="ConceptsRequiresClasses\Module_ConceptsRequiresClasses.ixx" />
+    <ClCompile Include="ConceptsRequiresFunctions\ConceptsRequiresFunctions.cpp" />
+    <ClCompile Include="ConceptsRequiresFunctions\Module_ConceptsRequiresFunctions.ixx" />
+    <ClCompile Include="ConstExpr\ConstExpr.cpp" />
+    <ClCompile Include="ConstExpr\ConstExpr_CRC.cpp" />
+    <ClCompile Include="ConstExpr\Module_ConstExpr.ixx" />
+    <ClCompile Include="ConstructorsOrder\ConstructorsDestructorsOrder.cpp" />
+    <ClCompile Include="ConstructorsOrder\Module_ConstructorsDestructorsOrder.ixx" />
+    <ClCompile Include="Const\Const.cpp" />
+    <ClCompile Include="Const\Module_Const.ixx" />
+    <ClCompile Include="CopyMoveElision\CopyMoveElision.cpp" />
+    <ClCompile Include="CopyMoveElision\Module_CopyMoveElision.ixx" />
+    <ClCompile Include="CopySwapIdiom\CopySwapIdiom.cpp" />
+    <ClCompile Include="CopySwapIdiom\Module_CopySwapIdiom.ixx" />
+    <ClCompile Include="CRTP\CRTP.cpp" />
+    <ClCompile Include="CRTP\Module_CRTP.ixx" />
+    <ClCompile Include="DeclType\Decltype.cpp" />
+    <ClCompile Include="DeclType\Module_Decltype.ixx" />
+    <ClCompile Include="DefaultInitialization\DefaultInitialization.cpp" />
+    <ClCompile Include="DefaultInitialization\Module_DefaultInitialization.ixx" />
+    <ClCompile Include="EraseRemoveIdiom\EraseRemoveIdiom.cpp" />
+    <ClCompile Include="EraseRemoveIdiom\Module_EraseRemoveIdiom.ixx" />
+    <ClCompile Include="ExceptionSafety\ExceptionSafety.cpp" />
+    <ClCompile Include="ExceptionSafety\Module_ExceptionSafety.ixx" />
+    <ClCompile Include="Exercises\Exercises_14_ConstExpr.cpp" />
+    <ClCompile Include="Exercises\Exercises_15_SmartPointers.cpp" />
+    <ClCompile Include="Exercises\Exercises_01_MoveSemantics.cpp" />
+    <ClCompile Include="Exercises\Exercises_02_Lambdas.cpp" />
+    <ClCompile Include="Exercises\Exercises_03_STL.cpp" />
+    <ClCompile Include="Exercises\Exercises_04_UtilityClasses.cpp" />
+    <ClCompile Include="Exercises\Exercises_05_VariadicTemplates.cpp" />
+    <ClCompile Include="Exercises\Exercises_06_Folding.cpp" />
+    <ClCompile Include="Exercises\Exercises_07_Metaprogramming.cpp" />
+    <ClCompile Include="Exercises\Exercises_08_ExpressionTemplates.cpp" />
+    <ClCompile Include="Exercises\Exercises_09_SFINAE.cpp" />
+    <ClCompile Include="Exercises\Exercises_10_CRTP.cpp" />
+    <ClCompile Include="Exercises\Exercises_11_Initialization.cpp" />
+    <ClCompile Include="Exercises\Exercises_12_PerfectForwarding.cpp" />
+    <ClCompile Include="Exercises\Exercises_13_FunctionalProgramming.cpp" />
+    <ClCompile Include="Exercises\Exercises.cpp" />
+    <ClCompile Include="Exercises\Exercises_16_Generic_Lambdas.cpp" />
+    <ClCompile Include="Exercises\Exercises_17_Concepts.cpp" />
+    <ClCompile Include="Exercises\Module_Exercises_01_MoveSemantics.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_02_Lambdas.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_03_STL.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_04_UtilityClasses.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_05_VariadicTemplates.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_06_Folding.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_07_Metaprogramming.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_08_ExpressionTemplates.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_09_SFINAE.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_10_CRTP.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_11_Initialization.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_12_PerfectForwarding.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_13_FunctionalProgramming.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_14_ConstExpr.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_15_SmartPointers.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_16_GenericLambdas.ixx" />
+    <ClCompile Include="Exercises\Module_Exercises_17_Concepts.ixx" />
+    <ClCompile Include="Expected\Expected.cpp" />
+    <ClCompile Include="Expected\Module_Expected.ixx" />
+    <ClCompile Include="Explicit\Explicit.cpp" />
+    <ClCompile Include="Explicit\Module_Explicit.ixx" />
+    <ClCompile Include="ExpressionTemplates\ExpressionTemplates.cpp" />
+    <ClCompile Include="ExpressionTemplates\Module_ExpressionTemplates.ixx" />
+    <ClCompile Include="Folding\Module_Folding.ixx" />
+    <ClCompile Include="Folding\Folding.cpp" />
+    <ClCompile Include="FunctionalProgramming\FunctionalProgramming.cpp" />
+    <ClCompile Include="FunctionalProgramming\FunctionalProgramming02.cpp" />
+    <ClCompile Include="FunctionalProgramming\FunctionalProgramming03.cpp" />
+    <ClCompile Include="FunctionalProgramming\Module_FunctionalProgramming.ixx" />
+    <ClCompile Include="Generate\Generate.cpp" />
+    <ClCompile Include="Generate\Module_Generate.ixx" />
+    <ClCompile Include="GenericFunctions\GenericFunctions.cpp" />
+    <ClCompile Include="GenericFunctions\Module_Generic_Functions.ixx" />
+    <ClCompile Include="Global\Dummy.cpp" />
+    <ClCompile Include="InitializerList\InitializerList.cpp" />
+    <ClCompile Include="InitializerList\Module_InitializerList.ixx" />
+    <ClCompile Include="InputOutputStreams\InputOutputStreams.cpp" />
+    <ClCompile Include="InputOutputStreams\Module_InputOutputStreams.ixx" />
+    <ClCompile Include="Invoke\Invoke.cpp" />
+    <ClCompile Include="Invoke\Module_Invoke.ixx" />
+    <ClCompile Include="Lambda\Lambda01.cpp" />
+    <ClCompile Include="Lambda\Lambda01_Legacy.cpp" />
+    <ClCompile Include="Lambda\Lambda03.cpp" />
+    <ClCompile Include="Lambda\Lambda02.cpp" />
+    <ClCompile Include="Lambda\Module_Lambda.ixx" />
+    <ClCompile Include="Literals\Literals.cpp" />
+    <ClCompile Include="Literals\Module_Literals.ixx" />
+    <ClCompile Include="MemoryLeaks\MemoryLeaksDetection.cpp" />
+    <ClCompile Include="MemoryLeaks\Module_MemoryLeaksDetection.ixx" />
+    <ClCompile Include="MetaProgramming\MetaProgramming01.cpp" />
+    <ClCompile Include="MetaProgramming\MetaProgramming02.cpp" />
+    <ClCompile Include="MetaProgramming\Module_MetaProgramming.ixx" />
+    <ClCompile Include="ModularizedStandardLibrary\ModularizedStandardLibrary.cpp" />
+    <ClCompile Include="ModularizedStandardLibrary\Module_ModularizedStandardLibrary.ixx" />
+    <ClCompile Include="Modules\HelloWorldProgram.cpp" />
+    <ClCompile Include="Modules\HelloWorldProgram.ixx" />
+    <ClCompile Include="Modules\Modules.cpp" />
+    <ClCompile Include="Modules\Module_Modules.ixx" />
+    <ClCompile Include="Module_Modern_Cpp.ixx" />
+    <ClCompile Include="Module_Modern_Cpp_Exercises.ixx" />
+    <ClCompile Include="MoveSemantics\Module_MoveSemantics.ixx" />
+    <ClCompile Include="MoveSemantics\MoveSemantics.cpp" />
+    <ClCompile Include="Optional\Module_Optional.ixx" />
+    <ClCompile Include="Optional\Optional.cpp" />
+    <ClCompile Include="PerfectForwarding\Module_PerfectForwarding.ixx" />
+    <ClCompile Include="PerfectForwarding\PerfectForwarding.cpp" />
+    <ClCompile Include="PlacementNew\Module_PlacementNew.ixx" />
+    <ClCompile Include="PlacementNew\PlacementNew.cpp" />
+    <ClCompile Include="Println\Module_Println.ixx" />
+    <ClCompile Include="Println\Println.cpp" />
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="RAII\Module_RAII.ixx" />
+    <ClCompile Include="RAII\RAII01.cpp" />
+    <ClCompile Include="RAII\RAII02.cpp" />
+    <ClCompile Include="Random\Module_Random.ixx" />
+    <ClCompile Include="Random\Random.cpp" />
+    <ClCompile Include="RangeBasedForLoop\Module_RangeBasedForLoop.ixx" />
+    <ClCompile Include="RangeBasedForLoop\RangeBasedForLoop.cpp" />
+    <ClCompile Include="ReferenceWrapper\Module_ReferenceWrapper.ixx" />
+    <ClCompile Include="ReferenceWrapper\ReferenceWrapper.cpp" />
+    <ClCompile Include="RegExpr\Module_RegExpr.ixx" />
+    <ClCompile Include="RegExpr\RegExpr.cpp" />
+    <ClCompile Include="RValueLValue\Module_RValueLValue.ixx" />
+    <ClCompile Include="RValueLValue\RValueLValue.cpp" />
+    <ClCompile Include="SFINAE_EnableIf\Module_Sfinae.ixx" />
+    <ClCompile Include="SFINAE_EnableIf\Sfinae.cpp" />
+    <ClCompile Include="SharedPtr\Module_SharedPtr.ixx" />
+    <ClCompile Include="SharedPtr\SharedPtr.cpp" />
+    <ClCompile Include="SourceLocation\Module_SourceLocation.ixx" />
+    <ClCompile Include="SourceLocation\SourceLocation.cpp" />
+    <ClCompile Include="SSO\Module_SSO.ixx" />
+    <ClCompile Include="SSO\SSO.cpp" />
+    <ClCompile Include="StaticAssert\Module_StaticAssert.ixx" />
+    <ClCompile Include="StaticAssert\StaticAssert.cpp" />
+    <ClCompile Include="StringView\Module_StringView.ixx" />
+    <ClCompile Include="StringView\StringView.cpp" />
+    <ClCompile Include="StructuredBinding\Module_StructuredBinding.ixx" />
+    <ClCompile Include="StructuredBinding\StructuredBinding.cpp" />
+    <ClCompile Include="TemplateClassBasics\AnotherArray.ixx" />
+    <ClCompile Include="TemplateClassBasics\Module_TemplatesClassBasics.ixx" />
+    <ClCompile Include="TemplateClassBasics\MyArray.ixx" />
+    <ClCompile Include="TemplateClassBasics\TemplatesClassBasics01.cpp" />
+    <ClCompile Include="TemplateClassBasics\TemplatesClassBasics02.cpp" />
+    <ClCompile Include="TemplateConstexprIf\Module_TemplatesConstExpr_If.ixx" />
+    <ClCompile Include="TemplateConstexprIf\TemplatesConstExpr_If.cpp" />
+    <ClCompile Include="TemplateFunctionBasics\Module_TemplatesFunctionBasics.ixx" />
+    <ClCompile Include="TemplateFunctionBasics\TemplatesFunctionBasics.cpp" />
+    <ClCompile Include="TemplateSpecialization\Module_TemplatesSpecialization.ixx" />
+    <ClCompile Include="TemplateSpecialization\TemplatesSpecialization.cpp" />
+    <ClCompile Include="TemplateTemplateParameter\Module_TemplateTemplateParameter.ixx" />
+    <ClCompile Include="TemplateTemplateParameter\TemplateTemplateParameter_01.cpp" />
+    <ClCompile Include="TemplateTemplateParameter\TemplateTemplateParameter_02.cpp" />
+    <ClCompile Include="ToUnderlying\Module_ToUnderlying.ixx" />
+    <ClCompile Include="ToUnderlying\ToUnderlying.cpp" />
+    <ClCompile Include="Transform\Module_Transform.ixx" />
+    <ClCompile Include="Transform\Transform.cpp" />
+    <ClCompile Include="Tuple\Module_Tuple.ixx" />
+    <ClCompile Include="Tuple\Tuple.cpp" />
+    <ClCompile Include="TwoPhaseNameLookup\Module_TwoPhaseNameLookup.ixx" />
+    <ClCompile Include="TwoPhaseNameLookup\TwoPhaseNameLookup.cpp" />
+    <ClCompile Include="TypeErasure\Module_TypeErasure.ixx" />
+    <ClCompile Include="TypeErasure\TypeErasure.cpp" />
+    <ClCompile Include="TypeTraits\Module_TypeTraits.ixx" />
+    <ClCompile Include="TypeTraits\TypeTraits.cpp" />
+    <ClCompile Include="UniquePtr\Module_UniquePtr.ixx" />
+    <ClCompile Include="UniquePtr\UniquePtr.cpp" />
+    <ClCompile Include="VariadicTemplates\Module_VariadicTemplates.ixx" />
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_01_Introduction.cpp" />
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_02_WorkingOnEveryArgument.cpp" />
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_03_SumOfSums.cpp" />
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_04_Mixins.cpp" />
+    <ClCompile Include="Variant\Module_Variant.ixx" />
+    <ClCompile Include="Variant\Variant.cpp" />
+    <ClCompile Include="VirtualBaseClassDestructor\Module_VirtualBaseClassDestructor.ixx" />
+    <ClCompile Include="VirtualBaseClassDestructor\VirtualBaseClassDestructor.cpp" />
+    <ClCompile Include="VirtualOverrideFinal\Module_VirtualOverrideFinal.ixx" />
+    <ClCompile Include="VirtualOverrideFinal\VirtualOverrideFinal.cpp" />
+    <ClCompile Include="WeakPtr\Module_WeakPtr.ixx" />
+    <ClCompile Include="WeakPtr\WeakPtr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Readme.md" />
+    <None Include="Accumulate\Accumulate.md" />
+    <None Include="Agenda\Agenda.md" />
+    <None Include="Algorithms\Algorithms.md" />
+    <None Include="Allocator\Allocator.md" />
+    <None Include="Any\cpp_std_any.svg" />
+    <None Include="Any\Any.md" />
+    <None Include="Architecture\Architecture.md" />
+    <None Include="Architecture\Architecture_01.md" />
+    <None Include="Architecture\Architecture_02.md" />
+    <None Include="Architecture\Architecture_03.md" />
+    <None Include="Architecture\cpp_architecture_01_value_vs_reference_semantics.svg" />
+    <None Include="Architecture\cpp_architecture_02_value_vs_reference_semantics.svg" />
+    <None Include="Architecture\cpp_architecture_03_value_vs_reference_semantics.svg" />
+    <None Include="Architecture\cpp_architecture_04_value_vs_reference_semantics.svg" />
+    <None Include="Architecture\cpp_architecture_05_value_vs_reference_semantics.svg" />
+    <None Include="Architecture\cpp_architecture_06_value_vs_reference_semantics.svg" />
+    <None Include="Architecture\cpp_architecture_07_value_vs_reference_semantics.svg" />
+    <None Include="ArgumentDependentNameLookup\ArgumentDependentNameLookup.md" />
+    <None Include="ArrayDecay\ArrayDecay.md" />
+    <None Include="Array\Array.md" />
+    <None Include="Attributes\Attributes.md" />
+    <None Include="Auto\Auto.md" />
+    <None Include="BackInserter\BackInserter.md" />
+    <None Include="Bind\Bind.md" />
+    <None Include="BraceInitialization\BraceInitialization.md" />
+    <None Include="Casts\Casts.md" />
+    <None Include="Casts\cpp_casts.svg" />
+    <None Include="CommonType\CommonType.md" />
+    <None Include="ConceptsRequiresClasses\ConceptsRequiresClasses.md" />
+    <None Include="ConceptsRequiresFunctions\ConceptsRequiresFunctions.md" />
+    <None Include="ConstExpr\Constexpr.md" />
+    <None Include="ConstructorsOrder\ConstructorsDestructorsOrder.md" />
+    <None Include="Const\Const.md" />
+    <None Include="Const\cpp_const.svg" />
+    <None Include="CopyMoveElision\CopyMoveElision.md" />
+    <None Include="CopySwapIdiom\CopySwapIdiom.md" />
+    <None Include="CRTP\CRTP.md" />
+    <None Include="DeclType\decltype.md" />
+    <None Include="DefaultInitialization\DefaultInitialization.md" />
+    <None Include="EraseRemoveIdiom\EraseRemoveIdiom.md" />
+    <None Include="ExceptionSafety\ExceptionSafety.md" />
+    <None Include="Exercises\cpp_dividend_divisor.svg" />
+    <None Include="Exercises\cpp_exercise_my_string.svg" />
+    <None Include="Exercises\cpp_hash_table_phonebook.svg" />
+    <None Include="Exercises\cpp_vector_phonebook.svg" />
+    <None Include="Exercises\Exercises_14_ConstExpr.md" />
+    <None Include="Exercises\Exercises_15_SmartPointers.md" />
+    <None Include="Exercises\Exercises_16_GenericLambdas.md" />
+    <None Include="Exercises\Exercises_01_MoveSemantics.md" />
+    <None Include="Exercises\Exercises_02_Lambdas.md" />
+    <None Include="Exercises\Exercises_03_STL.md" />
+    <None Include="Exercises\Exercises_04_UtilityClasses.md" />
+    <None Include="Exercises\Exercises_05_VariadicTemplates.md" />
+    <None Include="Exercises\Exercises_06_Folding.md" />
+    <None Include="Exercises\Exercises_07_Metaprogramming.md" />
+    <None Include="Exercises\Exercises_08_ExpressionTemplates.md" />
+    <None Include="Exercises\Exercises_09_SFINAE.md" />
+    <None Include="Exercises\Exercises_10_CRTP.md" />
+    <None Include="Exercises\Exercises_11_Initialization.md" />
+    <None Include="Exercises\Exercises_12_PerfectForwarding.md" />
+    <None Include="Exercises\Exercises_13_FunctionalProgramming.md" />
+    <None Include="Exercises\Exercises.md" />
+    <None Include="Exercises\Exercises_17_Concepts.md" />
+    <None Include="Expected\cpp_std_expected.svg" />
+    <None Include="Expected\Expected.md" />
+    <None Include="Explicit\Explicit.md" />
+    <None Include="ExpressionTemplates\ExpressionTemplates.md" />
+    <None Include="Folding\Folding.md" />
+    <None Include="FunctionalProgramming\FunctionalProgramming.md" />
+    <None Include="Generate\cpp_generate.svg" />
+    <None Include="Generate\Generate.md" />
+    <None Include="GenericFunctions\GenericFunctions.md" />
+    <None Include="InitializerList\cpp_initializer_list.svg" />
+    <None Include="InitializerList\InitializerList.md" />
+    <None Include="InputOutputStreams\InputOutputStreams.md" />
+    <None Include="Invoke\Invoke.md" />
+    <None Include="Lambda\cpp_snippets_lambda.svg" />
+    <None Include="Lambda\Lambda.md" />
+    <None Include="Lambda\Lambda_Legacy.md" />
+    <None Include="Literals\Literals.md" />
+    <None Include="Literatur\Literature.md" />
+    <None Include="MemoryLeaks\MemoryLeaksDetection.md" />
+    <None Include="MetaProgramming\Metaprogramming01.md" />
+    <None Include="MetaProgramming\Metaprogramming02.md" />
+    <None Include="ModularizedStandardLibrary\ModularizedStandardLibrary.md" />
+    <None Include="Modules\cpp_modules_02.svg" />
+    <None Include="Modules\Modules.md" />
+    <None Include="MoveSemantics\MoveSemantics.md" />
+    <None Include="OnlineCppCompilers\OnlineCppCompilers.md" />
+    <None Include="Optional\cpp_std_optional.svg" />
+    <None Include="Optional\Optional.md" />
+    <None Include="ParametersWithConstAndRef\ConstDeclarations.md" />
+    <None Include="PerfectForwarding\PerfectForwarding.md" />
+    <None Include="PerfectForwarding\PerfectForwarding_01.md" />
+    <None Include="PerfectForwarding\PerfectForwarding_02.md" />
+    <None Include="PerfectForwarding\PerfectForwarding_03.md" />
+    <None Include="PlacementNew\PlacementNew.md" />
+    <None Include="Println\Println.md" />
+    <None Include="RAII\RAII.md" />
+    <None Include="Random\Random.md" />
+    <None Include="RangeBasedForLoop\cpp_range_based_loop.svg" />
+    <None Include="RangeBasedForLoop\RangeBasedForLoop.md" />
+    <None Include="ReferenceWrapper\ReferenceWrapper.md" />
+    <None Include="RegExpr\RegExpr.md" />
+    <None Include="RValueLValue\RValueLValue.md" />
+    <None Include="SFINAE_EnableIf\Sfinae.md" />
+    <None Include="SharedPtr\cpp_control_block_01.svg" />
+    <None Include="SharedPtr\SharedPtr.md" />
+    <None Include="SourceLocation\SourceLocation.md" />
+    <None Include="SSO\SSO.md" />
+    <None Include="StaticAssert\StaticAssert.md" />
+    <None Include="StringView\cpp_string_view_01.svg" />
+    <None Include="StringView\cpp_string_view_02.svg" />
+    <None Include="StringView\StringView.md" />
+    <None Include="StructuredBinding\StructuredBinding.md" />
+    <None Include="TemplateClassBasics\cpp_template_instantiation.svg" />
+    <None Include="TemplateClassBasics\TemplatesClassBasics.md" />
+    <None Include="TemplateConstexprIf\TemplatesConstExpr_If.md" />
+    <None Include="TemplateFunctionBasics\TemplatesFunctionBasics.md" />
+    <None Include="TemplateSpecialization\TemplateSpecialization.md" />
+    <None Include="TemplateTemplateParameter\TemplateTemplateParameter.md" />
+    <None Include="ToUnderlying\ToUnderlying.md" />
+    <None Include="Transform\cpp_snippet_transform_01.svg" />
+    <None Include="Transform\cpp_snippet_transform_02.svg" />
+    <None Include="Transform\Transform.md" />
+    <None Include="Tuple\cpp_std_tuple.svg" />
+    <None Include="Tuple\Tuple.md" />
+    <None Include="TwoPhaseNameLookup\TwoPhaseNameLookup.md" />
+    <None Include="TypeErasure\TypeErasure.md" />
+    <None Include="TypeTraits\TypeTraits.md" />
+    <None Include="UniquePtr\UniquePtr.md" />
+    <None Include="UsingNamespaceStd\UsingNamespaceStd.md" />
+    <None Include="VariadicTemplates\cpp_snippets_mixins_01.svg" />
+    <None Include="VariadicTemplates\cpp_snippets_mixins_02.svg" />
+    <None Include="VariadicTemplates\VariadicTemplates_01_Introduction.md" />
+    <None Include="VariadicTemplates\VariadicTemplates_04_Mixins.md" />
+    <None Include="VariadicTemplates\VariadicTemplates_03_SumOfSums.md" />
+    <None Include="VariadicTemplates\VariadicTemplates_02_WorkingOnEveryArgument.md" />
+    <None Include="Variant\cpp_std_variant.svg" />
+    <None Include="Variant\Variant.md" />
+    <None Include="VirtualBaseClassDestructor\VirtualBaseClassDestructor.md" />
+    <None Include="VirtualOverrideFinal\VirtualOverrideFinal.md" />
+    <None Include="WeakPtr\cpp_control_block_02.svg" />
+    <None Include="WeakPtr\cpp_sharedptr_cycle_01.svg" />
+    <None Include="WeakPtr\cpp_sharedptr_cycle_02.svg" />
+    <None Include="WeakPtr\cpp_sharedptr_cycle_03.svg" />
+    <None Include="WeakPtr\cpp_sharedptr_cycle_04.svg" />
+    <None Include="WeakPtr\cpp_sharedptr_cycle_05.svg" />
+    <None Include="WeakPtr\cpp_sharedptr_cycle_10.svg" />
+    <None Include="WeakPtr\cpp_sharedptr_cycle_11.svg" />
+    <None Include="WeakPtr\cpp_snippets_cyclic_references.svg" />
+    <None Include="WeakPtr\WeakPtr.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Global\Dummy.ixx">
+      <FileType>Document</FileType>
+    </ClCompile>
+    <ClCompile Include="TemplateClassBasics\AnotherArray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Auto\auto_no_const_reference.png" />
+    <Image Include="Auto\decltype_auto_01.png" />
+    <Image Include="Auto\decltype_auto_02.png" />
+    <Image Include="BraceInitialization\cpp_init.gif" />
+    <Image Include="ConstExpr\ConstExpr01.png" />
+    <Image Include="ConstExpr\ConstExpr02.png" />
+    <Image Include="ConstExpr\ConstExpr03.png" />
+    <Image Include="ConstExpr\constexpr_lambda_01.png" />
+    <Image Include="ConstExpr\constexpr_lambda_02.png" />
+    <Image Include="CopyMoveElision\CopyMoveElision.png" />
+    <Image Include="EraseRemoveIdiom\InvalidIterator.png" />
+    <Image Include="Exercises\cpp_dividend_divisor.png" />
+    <Image Include="Images\CertifiedExpertTrainer.png" />
+    <Image Include="Images\Horse_Cpp.png" />
+    <Image Include="Images\tiobe_index_december_2022.png" />
+    <Image Include="Images\what_are_you_studying.png" />
+    <Image Include="Lambda\CppInsights.png" />
+    <Image Include="Lambda\Lambdas_constexpr_IIFE.png" />
+    <Image Include="Literatur\Buch_Andreas_Fertig_Cpp_Tips_Tricks.png" />
+    <Image Include="Literatur\Buch_Jacek_Galowicz_Cpp_17_Cookbook.png" />
+    <Image Include="Literatur\Buch_Marc_Gregoire.png" />
+    <Image Include="Literatur\Buch_Marius_Bancila_Modern_Cpp_Challenge.png" />
+    <Image Include="Literatur\Buch_Marius_Bancila_Modern_Cpp_Cookbook_23.png" />
+    <Image Include="Literatur\Buch_Nicolai_Josuttis_Cpp_20_Complete_Guide.png" />
+    <Image Include="Literatur\Buch_Nicolai_Josuttis_Cpp_Move_Semantics.png" />
+    <Image Include="Literatur\Buch_Peter_Pohmann_Cpp_17.png" />
+    <Image Include="Literatur\Buch_Stephan_Roth_Clean_Cpp_20.png" />
+    <Image Include="Literatur\Buch_T_Will_Cpp_Handbuch_C23.png" />
+    <Image Include="Literatur\Buch_Vandervoorde_Josuttis_Gregor_Cpp_Templates.png" />
+    <Image Include="MetaProgramming\euler_number.png" />
+    <Image Include="MetaProgramming\GGT_Algorithmus_Euklid.png" />
+    <Image Include="ModularizedStandardLibrary\ModularizedStandardLibrary.png" />
+    <Image Include="OnlineCppCompilers\CompilerExplorer.png" />
+    <Image Include="OnlineCppCompilers\Cppinsights.png" />
+    <Image Include="OnlineCppCompilers\Wandbox.png" />
+    <Image Include="OnlineCppCompilers\WandboxOptions01.png" />
+    <Image Include="OnlineCppCompilers\WandboxOptions02.png" />
+    <Image Include="OnlineCppCompilers\WandboxOptions03.png" />
+    <Image Include="PerfectForwarding\ScottMeyers_Forward.png" />
+    <Image Include="PerfectForwarding\Whaaaat.gif" />
+    <Image Include="Println\StdPrintln.png" />
+    <Image Include="SharedPtr\SharedPointer_01.png" />
+    <Image Include="SharedPtr\SharedPointer_02.png" />
+    <Image Include="SharedPtr\WeakPointer_01.PNG" />
+    <Image Include="SharedPtr\WeakPointer_02.PNG" />
+    <Image Include="TemplateClassBasics\template_instantiations_01.png" />
+    <Image Include="TemplateClassBasics\template_instantiations_02.png" />
+    <Image Include="Trim\stl_base.png" />
+    <Image Include="UniformInitialization\cpp_init.gif" />
+    <Image Include="VariadicTemplates\cpp_snippets_mixins_01.png" />
+    <Image Include="VariadicTemplates\cpp_snippets_mixins_02.png" />
+    <Image Include="WeakPtr\cpp_snippets_cyclic_references.png" />
+    <Image Include="WeakPtr\cycle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScopedTimer\ScopedTimer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Notizzettel.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

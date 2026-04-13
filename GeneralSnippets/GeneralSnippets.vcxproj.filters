@@ -1,0 +1,1294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Exercises">
+      <UniqueIdentifier>{91495f1f-f10f-443c-a9a7-f8d349af19f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{2680afac-be2b-40c9-80c6-ad18b1ad8a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{f38d6bc2-2f11-43df-af11-e4e28755f82a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReferenceWrapper\ReferenceWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticAssert\StaticAssert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StructuredBinding\StructuredBinding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeTraits\TypeTraits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitializerList\InitializerList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedPtr\SharedPtr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WeakPtr\WeakPtr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Casts\Casts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputOutputStreams\InputOutputStreams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RValueLValue\RValueLValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryLeaks\MemoryLeaksDetection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Global\Dummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateTemplateParameter\TemplateTemplateParameter_02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateTemplateParameter\TemplateTemplateParameter_01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayDecay\ArrayDecay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any\Any.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tuple\Tuple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateConstexprIf\TemplatesConstExpr_If.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda\Lambda01_Legacy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Accumulate\Accumulate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Variant\Variant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Explicit\Explicit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Array\Array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda\Lambda02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RAII\RAII01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RAII\RAII02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Literals\Literals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaProgramming\MetaProgramming01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaProgramming\MetaProgramming02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_02_WorkingOnEveryArgument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_03_SumOfSums.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_04_Mixins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SFINAE_EnableIf\Sfinae.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeclType\Decltype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UniquePtr\UniquePtr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonType\CommonType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariadicTemplates\VariadicTemplate_01_Introduction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveSemantics\MoveSemantics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Random\Random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionalProgramming\FunctionalProgramming02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionalProgramming\FunctionalProgramming03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRTP\CRTP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualBaseClassDestructor\VirtualBaseClassDestructor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Invoke\Invoke.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BackInserter\BackInserter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualOverrideFinal\VirtualOverrideFinal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringView\StringView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda\Lambda03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultInitialization\DefaultInitialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstExpr\ConstExpr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegExpr\RegExpr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSO\SSO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EraseRemoveIdiom\EraseRemoveIdiom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Folding\Folding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto\Auto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Generate\Generate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeBasedForLoop\RangeBasedForLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateFunctionBasics\TemplatesFunctionBasics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Attributes\Attributes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArgumentDependentNameLookup\ArgumentDependentNameLookup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bind\Bind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstExpr\ConstExpr_CRC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateClassBasics\TemplatesClassBasics01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateClassBasics\TemplatesClassBasics02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateSpecialization\TemplatesSpecialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateClassBasics\AnotherArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionTemplates\ExpressionTemplates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CopyMoveElision\CopyMoveElision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConceptsRequiresFunctions\ConceptsRequiresFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_01_MoveSemantics.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_02_Lambdas.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_03_STL.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_04_UtilityClasses.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_05_VariadicTemplates.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_06_Folding.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_07_Metaprogramming.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_08_ExpressionTemplates.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_09_SFINAE.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_10_CRTP.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_11_Initialization.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_12_PerfectForwarding.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_13_FunctionalProgramming.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_14_ConstExpr.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_15_SmartPointers.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_16_Generic_Lambdas.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Module_Modern_Cpp.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Module_Modern_Cpp_Exercises.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto\Module_Auto.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Accumulate\Module_Accumulate.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ArgumentDependentNameLookup\Module_ArgumentDependentNameLookup.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Array\Module_Array.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayDecay\Module_Array_Decay.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Attributes\Module_Attributes.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Any\Module_Any.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="BackInserter\Module_BackInserter.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Bind\Module_Bind.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Casts\Module_Casts.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonType\Module_CommonType.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ConceptsRequiresFunctions\Module_ConceptsRequiresFunctions.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstExpr\Module_ConstExpr.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="CopyMoveElision\Module_CopyMoveElision.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="CRTP\Module_CRTP.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="DeclType\Module_Decltype.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultInitialization\Module_DefaultInitialization.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="EraseRemoveIdiom\Module_EraseRemoveIdiom.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Explicit\Module_Explicit.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionTemplates\Module_ExpressionTemplates.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Folding\Module_Folding.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionalProgramming\Module_FunctionalProgramming.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Generate\Module_Generate.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="InitializerList\Module_InitializerList.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="InputOutputStreams\Module_InputOutputStreams.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Invoke\Module_Invoke.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda\Module_Lambda.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Literals\Module_Literals.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryLeaks\Module_MemoryLeaksDetection.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaProgramming\Module_MetaProgramming.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveSemantics\Module_MoveSemantics.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\Module_Optional.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\Optional.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfectForwarding\Module_PerfectForwarding.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Global\Dummy.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="RAII\Module_RAII.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_01_MoveSemantics.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_02_Lambdas.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_03_STL.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_04_UtilityClasses.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_05_VariadicTemplates.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_06_Folding.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_07_Metaprogramming.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_08_ExpressionTemplates.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_09_SFINAE.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_10_CRTP.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_11_Initialization.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_12_PerfectForwarding.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_13_FunctionalProgramming.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_14_ConstExpr.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_15_SmartPointers.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_16_GenericLambdas.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Random\Module_Random.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeBasedForLoop\Module_RangeBasedForLoop.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ReferenceWrapper\Module_ReferenceWrapper.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="RegExpr\Module_RegExpr.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="RValueLValue\Module_RValueLValue.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="SFINAE_EnableIf\Module_Sfinae.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedPtr\Module_SharedPtr.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="SSO\Module_SSO.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticAssert\Module_StaticAssert.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="StringView\Module_StringView.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="StructuredBinding\Module_StructuredBinding.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateClassBasics\Module_TemplatesClassBasics.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateClassBasics\MyArray.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateClassBasics\AnotherArray.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateConstexprIf\Module_TemplatesConstExpr_If.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateFunctionBasics\Module_TemplatesFunctionBasics.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateSpecialization\Module_TemplatesSpecialization.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateTemplateParameter\Module_TemplateTemplateParameter.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform\Module_Transform.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Tuple\Module_Tuple.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeTraits\Module_TypeTraits.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="UniquePtr\Module_UniquePtr.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="VariadicTemplates\Module_VariadicTemplates.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Variant\Module_Variant.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualBaseClassDestructor\Module_VirtualBaseClassDestructor.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualOverrideFinal\Module_VirtualOverrideFinal.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="WeakPtr\Module_WeakPtr.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Allocator\Allocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Allocator\Module_Allocator.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ConceptsRequiresClasses\Module_ConceptsRequiresClasses.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ConceptsRequiresClasses\ConceptsRequiresClasses.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Module_Exercises_17_Concepts.ixx">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises_17_Concepts.cpp">
+      <Filter>Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfectForwarding\PerfectForwarding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructorsOrder\Module_ConstructorsDestructorsOrder.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructorsOrder\ConstructorsDestructorsOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BraceInitialization\Module_BraceInitialization.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="BraceInitialization\BraceInitialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlacementNew\Module_PlacementNew.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="PlacementNew\PlacementNew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceLocation\SourceLocation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceLocation\Module_SourceLocation.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ToUnderlying\ToUnderlying.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToUnderlying\Module_ToUnderlying.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Const\Module_Const.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Const\Const.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionalProgramming\FunctionalProgramming.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModularizedStandardLibrary\Module_ModularizedStandardLibrary.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModularizedStandardLibrary\ModularizedStandardLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeErasure\TypeErasure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeErasure\Module_TypeErasure.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="CopySwapIdiom\CopySwapIdiom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CopySwapIdiom\Module_CopySwapIdiom.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionSafety\ExceptionSafety.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionSafety\Module_ExceptionSafety.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoPhaseNameLookup\TwoPhaseNameLookup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoPhaseNameLookup\Module_TwoPhaseNameLookup.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\HelloWorldProgram.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Module_Modules.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\HelloWorldProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Modules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericFunctions\Module_Generic_Functions.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericFunctions\GenericFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Println\Module_Println.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Println\Println.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\Algorithms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\Module_Algorithms.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Expected\Expected.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Expected\Module_Expected.ixx">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda\Lambda01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Readme.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="StaticAssert\StaticAssert.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SharedPtr\SharedPtr.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="StructuredBinding\StructuredBinding.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReferenceWrapper\ReferenceWrapper.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TemplateConstexprIf\TemplatesConstExpr_If.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TemplateTemplateParameter\TemplateTemplateParameter.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RAII\RAII.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\WeakPtr.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TypeTraits\TypeTraits.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Tuple\Tuple.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UsingNamespaceStd\UsingNamespaceStd.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Variant\Variant.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ArrayDecay\ArrayDecay.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Accumulate\Accumulate.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Array\Array.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RValueLValue\RValueLValue.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Allocator\Allocator.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Casts\Casts.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Any\Any.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Literatur\Literature.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Literals\Literals.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MemoryLeaks\MemoryLeaksDetection.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InitializerList\InitializerList.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InputOutputStreams\InputOutputStreams.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ParametersWithConstAndRef\ConstDeclarations.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Lambda\Lambda_Legacy.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UniquePtr\UniquePtr.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Explicit\Explicit.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MetaProgramming\Metaprogramming02.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MetaProgramming\Metaprogramming01.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VariadicTemplates\VariadicTemplates_01_Introduction.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VariadicTemplates\VariadicTemplates_02_WorkingOnEveryArgument.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VariadicTemplates\VariadicTemplates_03_SumOfSums.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VariadicTemplates\VariadicTemplates_04_Mixins.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SFINAE_EnableIf\Sfinae.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="DeclType\decltype.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FunctionalProgramming\FunctionalProgramming.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CRTP\CRTP.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ExpressionTemplates\ExpressionTemplates.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CommonType\CommonType.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MoveSemantics\MoveSemantics.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Random\Random.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VirtualBaseClassDestructor\VirtualBaseClassDestructor.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Invoke\Invoke.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TemplateSpecialization\TemplateSpecialization.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Lambda\cpp_snippets_lambda.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VariadicTemplates\cpp_snippets_mixins_01.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VariadicTemplates\cpp_snippets_mixins_02.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_snippets_cyclic_references.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\cpp_dividend_divisor.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="BackInserter\BackInserter.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VirtualOverrideFinal\VirtualOverrideFinal.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="DefaultInitialization\DefaultInitialization.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="StringView\StringView.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Transform\cpp_snippet_transform_01.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Transform\cpp_snippet_transform_02.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Transform\Transform.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RegExpr\RegExpr.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_01_MoveSemantics.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_02_Lambdas.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_03_STL.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_04_UtilityClasses.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_05_VariadicTemplates.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_06_Folding.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_07_Metaprogramming.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_08_ExpressionTemplates.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_09_SFINAE.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_10_CRTP.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_11_Initialization.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_12_PerfectForwarding.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_13_FunctionalProgramming.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SSO\SSO.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="EraseRemoveIdiom\EraseRemoveIdiom.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Agenda\Agenda.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Folding\Folding.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="OnlineCppCompilers\OnlineCppCompilers.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ConstExpr\Constexpr.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_14_ConstExpr.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Auto\Auto.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_15_SmartPointers.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Generate\Generate.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Generate\cpp_generate.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RangeBasedForLoop\RangeBasedForLoop.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Any\cpp_std_any.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Variant\cpp_std_variant.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Optional\cpp_std_optional.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TemplateClassBasics\TemplatesClassBasics.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TemplateFunctionBasics\TemplatesFunctionBasics.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Attributes\Attributes.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ArgumentDependentNameLookup\ArgumentDependentNameLookup.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RangeBasedForLoop\cpp_range_based_loop.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Bind\Bind.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TemplateClassBasics\cpp_template_instantiation.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_16_GenericLambdas.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InitializerList\cpp_initializer_list.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CopyMoveElision\CopyMoveElision.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ConceptsRequiresFunctions\ConceptsRequiresFunctions.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_sharedptr_cycle_01.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_sharedptr_cycle_02.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_sharedptr_cycle_03.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_sharedptr_cycle_04.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_sharedptr_cycle_05.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Optional\Optional.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ConceptsRequiresClasses\ConceptsRequiresClasses.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\Exercises_17_Concepts.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PerfectForwarding\PerfectForwarding.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ConstructorsOrder\ConstructorsDestructorsOrder.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="BraceInitialization\BraceInitialization.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PlacementNew\PlacementNew.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SourceLocation\SourceLocation.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ToUnderlying\ToUnderlying.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Const\Const.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Const\cpp_const.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ModularizedStandardLibrary\ModularizedStandardLibrary.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TypeErasure\TypeErasure.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CopySwapIdiom\CopySwapIdiom.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Tuple\cpp_std_tuple.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ExceptionSafety\ExceptionSafety.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TwoPhaseNameLookup\TwoPhaseNameLookup.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Modules\Modules.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Modules\cpp_modules_02.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GenericFunctions\GenericFunctions.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Println\Println.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Algorithms\Algorithms.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Casts\cpp_casts.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="StringView\cpp_string_view_01.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="StringView\cpp_string_view_02.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Expected\Expected.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SharedPtr\cpp_control_block_01.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_control_block_02.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_sharedptr_cycle_10.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="WeakPtr\cpp_sharedptr_cycle_11.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Expected\cpp_std_expected.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PerfectForwarding\PerfectForwarding_01.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PerfectForwarding\PerfectForwarding_02.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PerfectForwarding\PerfectForwarding_03.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\cpp_exercise_my_string.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\cpp_vector_phonebook.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exercises\cpp_hash_table_phonebook.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\Architecture.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\Architecture_01.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\Architecture_02.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\Architecture_03.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\cpp_architecture_01_value_vs_reference_semantics.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\cpp_architecture_02_value_vs_reference_semantics.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\cpp_architecture_03_value_vs_reference_semantics.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\cpp_architecture_04_value_vs_reference_semantics.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\cpp_architecture_05_value_vs_reference_semantics.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\cpp_architecture_06_value_vs_reference_semantics.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Architecture\cpp_architecture_07_value_vs_reference_semantics.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Lambda\Lambda.md">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="VariadicTemplates\cpp_snippets_mixins_01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="VariadicTemplates\cpp_snippets_mixins_02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="MetaProgramming\euler_number.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Exercises\cpp_dividend_divisor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UniformInitialization\cpp_init.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ConstExpr\ConstExpr01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ConstExpr\ConstExpr02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ConstExpr\ConstExpr03.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="OnlineCppCompilers\Wandbox.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="OnlineCppCompilers\CompilerExplorer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="OnlineCppCompilers\Cppinsights.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Trim\stl_base.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ConstExpr\constexpr_lambda_01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ConstExpr\constexpr_lambda_02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Auto\auto_no_const_reference.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Auto\decltype_auto_01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Auto\decltype_auto_02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="OnlineCppCompilers\WandboxOptions01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="OnlineCppCompilers\WandboxOptions02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="OnlineCppCompilers\WandboxOptions03.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TemplateClassBasics\template_instantiations_01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TemplateClassBasics\template_instantiations_02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="MetaProgramming\GGT_Algorithmus_Euklid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="CopyMoveElision\CopyMoveElision.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BraceInitialization\cpp_init.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Images\CertifiedExpertTrainer.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="Images\Horse_Cpp.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="Images\tiobe_index_december_2022.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="Images\what_are_you_studying.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="ModularizedStandardLibrary\ModularizedStandardLibrary.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Marc_Gregoire.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Andreas_Fertig_Cpp_Tips_Tricks.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Jacek_Galowicz_Cpp_17_Cookbook.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Marius_Bancila_Modern_Cpp_Challenge.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Marius_Bancila_Modern_Cpp_Cookbook_23.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Nicolai_Josuttis_Cpp_Move_Semantics.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Peter_Pohmann_Cpp_17.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Stephan_Roth_Clean_Cpp_20.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_T_Will_Cpp_Handbuch_C23.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Vandervoorde_Josuttis_Gregor_Cpp_Templates.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SharedPtr\SharedPointer_01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SharedPtr\SharedPointer_02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Println\StdPrintln.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Literatur\Buch_Nicolai_Josuttis_Cpp_20_Complete_Guide.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="PerfectForwarding\Whaaaat.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="EraseRemoveIdiom\InvalidIterator.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeakPtr\cpp_snippets_cyclic_references.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeakPtr\cycle.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="PerfectForwarding\ScottMeyers_Forward.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SharedPtr\WeakPointer_01.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SharedPtr\WeakPointer_02.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Lambda\CppInsights.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Lambda\Lambdas_constexpr_IIFE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScopedTimer\ScopedTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Notizzettel.txt" />
+  </ItemGroup>
+</Project>

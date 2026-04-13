@@ -1,0 +1,102 @@
+// =====================================
+
+Seminar "C++ Workshop // Clean Code C++"
+
+Location: werfen
+
+  Tem Innovations GmbH
+  Martin-Kollar-Straße 15
+  81829 Munich
+
+From: 13. – 15. April
+
+Teacher: Peter Loos
+
+EMail:   peter.loos@gmx.de
+
+Additional Materials:
+
+https://github.com/pelocpp
+
+// =====================================
+
+C, Python, Java, Go, C#, TypeScript (JavaScript)
+
+
+// =====================================
+
+RValue: Whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+Move-Semantics
+
+:: 0x0000026a36aa4570   // tmp. Object // stack // freed
+:: 0x0000026a36aa4030   // in the vector
+
+:: 0x000001a615a65770
+
+// =====================================
+
+auto
+
+1.) declaration of variables
+2.) declaration of a return type 
+3.) as parameter
+
+Is auto safe ...
+
+// =====================================
+
+New Initialization Syntax
+
+        double d1 = ival;      // Compiles
+00007FF72D15D640  cvtsi2sd    xmm0,dword ptr [ival]  
+00007FF72D15D645  movsd       mmword ptr [d1],xmm0  
+
+// =====================================
+
+auto
+3.) as parameter
+
+Generic Function
+
+// =====================================
+
+Lambda
+
+Lambda function   : WRONG
+
+Lambda function   : OBJECT  // class ????
+
+std::string
+
+int:
+    int m = n;
+00007FF789ACFD30  mov         eax,dword ptr [n]  
+00007FF789ACFD36  mov         dword ptr [m],eax  
+
+int&:
+    int m = n;
+00007FF77F85FD31  mov         rax,qword ptr [n]  
+00007FF77F85FD38  mov         eax,dword ptr [rax]  
+00007FF77F85FD3A  mov         dword ptr [m],eax  
+
+Callable Object  //  Functor  // 
+
+====================================================
+
+https://cppinsights.io/
+
+Tool:   Converter:   
+
+C++ Source Code in Modern Syntax ==>
+    C++ Source Code in Classic Syntax 
+
+==========================
+
+std::variant:   Utility Class
+
+
+Lambda: Are objects of an unknown type
+
+Objects:  methods and member variables
+
