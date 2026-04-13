@@ -60,7 +60,7 @@ int main()
         //main_initializer_list();
         //main_input_output_streams();  
         //main_invoke();
-        main_lambdas();
+        //main_lambdas();
         //main_lambda_and_closure();
         //main_lambdas_this_closure();
         //main_literals();
@@ -82,7 +82,7 @@ int main()
         //main_regular_expressions();
        // main_rvalue_lvalue();
         //main_sfinae();
-        //main_shared_ptr();
+       // main_shared_ptr();
         //main_source_location();
         //main_sso();
         //main_static_assert();
@@ -108,7 +108,7 @@ int main()
         //main_variant();
         //main_virtual_base_class_destructor();
         //main_virtual_override_final();
-        //main_weak_pointer();
+        main_weak_pointer();
 
        // main_exercises();
     }

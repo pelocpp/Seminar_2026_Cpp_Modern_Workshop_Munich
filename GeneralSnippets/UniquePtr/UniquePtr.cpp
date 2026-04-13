@@ -13,6 +13,15 @@ namespace UniquePointerGeneral {
 
     static void test_01()
     {
+        std::unique_ptr<int> ptr11;
+        std::unique_ptr<int> ptr22;
+
+        ptr11 = std::move(ptr22);
+
+        // ===> std::shared_ptr
+        std::vector<std::unique_ptr<int>> v;
+
+
         // create a unique_ptr to an int with value 123
         std::unique_ptr<int> ptr1{ new int{ 123 } };
         // or

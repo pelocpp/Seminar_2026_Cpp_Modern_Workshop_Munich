@@ -2,6 +2,10 @@
 // ConceptsRequiresFunctions.cpp
 // =====================================================================================
 
+module;
+
+#include <ranges>
+
 module modern_cpp:concepts_requires_functions;
 
 // using <concepts>
@@ -15,7 +19,7 @@ concept NumericalEx = std::is_integral<T>::value or std::is_floating_point<T>::v
 namespace Requires_Clause {
 
     template <typename T>
-        requires Numerical<T>
+       requires NumericalEx<T>
     auto add(T a, T b)
     {
         return a + b;
@@ -23,7 +27,7 @@ namespace Requires_Clause {
 
     // "inlining" constraints on template parameter types
     template <typename T>
-        requires std::integral<T> or std::floating_point<T>
+      //  requires std::integral<T> or std::floating_point<T>
     auto addEx(T a, T b)
     {
         return a + b;
@@ -48,14 +52,14 @@ namespace Requires_Clause {
         //    the concept 'Numerical<std::string>' evaluated to false
         //    the concept 'std::floating_point<std::string>' evaluated to false
         //    the concept 'std::integral<std::string>' evaluated to false
-        // auto sum4 = add(std::string { "ABC" }, std::string { "DEF" });
+      //  auto sum4 = add(std::string { "ABC" }, std::string { "DEF" });
     }
 
     // ---------------------------------------------------------------------------------
     // several, different template parameters
 
     template <typename T, typename U>
-        requires Numerical<T> and Numerical<U>
+        // requires Numerical<T> and Numerical<U>
     auto add(T a, U b)
     {
         return a + b;
@@ -201,8 +205,14 @@ namespace UserDefined_Concept {
     template <typename T>
     concept GreatIntegral = std::is_integral<T>::value and isGreaterThanWord<T>;
 
-    template<GreatIntegral T>
-    T incrementByOne(const T& arg) {
+    //template<GreatIntegral T>
+    //T incrementByOne(const T& arg) {
+    //    return arg + 1;
+    //}
+
+   template<typename T>
+       requires GreatIntegral<T>
+   T incrementByOne(const T& arg) {
         return arg + 1;
     }
 
@@ -216,9 +226,9 @@ namespace UserDefined_Concept {
 
         n = incrementByOne(n);
 
-        // short s{ 1 };
+         short s{ 1 };
         // the associated constraints are not satisfied:
-        // s = incrementByOne(s);
+     //    s = incrementByOne(s);
 
         n = incrementByTwo(n);
 
@@ -236,6 +246,17 @@ void main_concepts_requires_functions()
     Abbreviated_Function_Templates::test_abbreviated_function_template_syntax();
     UserDefined_Concept::test_user_defined_concept();
 }
+
+void main_xcc()
+{
+    std::vector<int> numbers;
+
+    // random access: operator[]
+
+    std::sort(numbers.begin(), numbers.end());
+
+}
+
 
 // =====================================================================================
 // End-of-File

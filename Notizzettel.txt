@@ -100,3 +100,90 @@ Lambda: Are objects of an unknown type
 
 Objects:  methods and member variables
 
+==========================================================
+
+Concepts & Requirements
+
+template <typename T, typename U>
+concept GenericIsIterable = requires(T v)
+{
+    { std::as_const(v).hasNext() } -> std::convertible_to<bool>;
+    { v.next() } -> std::same_as<U>;
+    { v.reset() }-> std::convertible_to<void>;
+};
+
+
+2 Variants of Compiler Erros:
+
+reagierend  // "error in line 3000 of <xutility.h>"
+
+oder 
+
+pro-aktiv   // pro-active
+
+==========================================================
+
+std::weak_ptr
+-------------
+
+What's the problem with shared ptr:
+
+It does not work always !!!!!!!!!!!!!!!!!!!!
+
+The data behind the shared pointer is NOT
+released always !!!!!!!!!!!!!!!!!
+
+A) std::weak_ptr:  How does this class work ???
+
+B) What problem does this class solve ????
+
+i) std::shared_ptr
+
+ii) std::weak_ptr
+
+When do I use a std::shared_ptr:
+
+===> When I want to OWN (!!!!!!!!!) the object
+
+
+When do I use a std::weak_ptr:
+
+===> When I want to use the object.
+
+     Is is not guaranteed, that the object still exists.
+
+Example:
+
+Observer-Pattern:
+
+Source-Object // to be observed
+Observers     // client, they want to observe
+
+a) Source-Object: shared or weak:  shared.
+
+b) Observers:  shared
+
+WHAT is / should be INSIDE the Source-Object: 
+
+    List of Observers.
+
+    std::vector // std::list   ==> weak !!!!!!!!!!!!!
+
+
+    std::vector <std::weak_ptr<IObserver>>
+
+    NO!!!!
+
+    std::vector <std::shared_ptr<IObserver>>
+
+
+
+    valid // != nullptr (lock) ==> notify
+    unvalid // == nullptr (lock) ==> NOTHING // No call
+
+
+================================================
+
+Pointer:
+
+std::unique_ptr   // OWNER: 1
