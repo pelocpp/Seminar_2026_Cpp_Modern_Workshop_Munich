@@ -18,6 +18,12 @@ Additional Materials:
 
 https://github.com/pelocpp
 
+// Modern C++
+https://github.com/pelocpp/cpp_modern
+
+// Design Pattern
+https://github.com/pelocpp/cpp_design_patterns
+
 // =====================================
 
 C, Python, Java, Go, C#, TypeScript (JavaScript)
@@ -187,3 +193,106 @@ WHAT is / should be INSIDE the Source-Object:
 Pointer:
 
 std::unique_ptr   // OWNER: 1
+
+================================================
+================================================
+
+SW and Design
+
+
+const - correctness ???
+
+std::optional
+
+std::expected  // C++ 23
+
+
+
+
+C++  Does NOT give a rule, but:
+
+C++: Statement: Expection handling
+
+     ==> Performance issue:  Stack Unwinding Issue
+
+     Statement:  Return Values.
+
+     Does EVERYBODY look at these return values ???????????????????
+
+===================
+
+    noexcept  Keyword:
+
+    Exception Handling means: GENERATE  Stack Unwinding code.
+
+     Method  XXX:  100% : This method CANNOT Fail.
+
+     THEREFORE I want to DROP generating  Stack Unwinding code.   ==> noexcept.
+
+     If it throws:  abort();
+
+    Example: When should I use keyword 'noexcept':
+
+
+    A) getter 
+
+    B) move - assignment // move- constructor:    Whyyyyyyyyyyyyyyyyyyy
+
+
+    BigData::BigData(BigData&& data) noexcept {  // move c'tor
+
+        std::println("move c'tor");
+
+        m_data = data.m_data;   // shallow copy
+        m_size = data.m_size;
+        data.m_data = nullptr;  // reset source object, ownership has been moved
+        data.m_size = 0;
+
+//        obj1 = obj2; 
+    }
+
+    BECAUSE there are ONLY ASSIGNMENTS of fundamental types // pointers
+
+    // ==================
+
+    BigData bd1, bd2;
+    bd1 = std::move(bd2);
+
+    // ==================
+
+    bd1, bd2   // 2. thread
+
+
+
+==================================================================
+
+ Single Responsibility Principle
+
+ God class
+
+Enge Kopplung // Tight Coupling // Bad Coupling
+
+Lose Kopplung  // Loose Coupling
+
+=======================================
+
+constexpr .... ?????
+
+Macros .......  similiar
+
+=======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

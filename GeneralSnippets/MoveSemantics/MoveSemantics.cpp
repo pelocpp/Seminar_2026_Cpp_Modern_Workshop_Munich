@@ -174,12 +174,15 @@ namespace MoveSemantics {
     static void test_02_demonstrate_move_ctor() {
 
         std::vector<BigData> vec;
+        vec.reserve(2);
 
         BigData myData (10, 1);
 
-        // vec.push_back(BigData(10, 1));
+        vec.push_back(BigData(10, 1));
+        vec.push_back(BigData(20, 1));
 
-        vec.push_back(std::move(myData));
+      // vec.push_back(myData);
+
     }
 
     static void test_03_demonstrate_move_assignment() {
@@ -210,11 +213,11 @@ namespace MoveSemantics {
 void main_move_semantics()
 {
     using namespace MoveSemantics;
-    test_01_move_semantics();
+    //test_01_move_semantics();
     test_02_demonstrate_move_ctor();
-    test_03_demonstrate_move_assignment();
-    test_04_demonstrate_move_assignment();
-    test_05_demonstrate_missing_noexept();
+    //test_03_demonstrate_move_assignment();
+    //test_04_demonstrate_move_assignment();
+    //test_05_demonstrate_missing_noexept();
 }
 
 // =====================================================================================
