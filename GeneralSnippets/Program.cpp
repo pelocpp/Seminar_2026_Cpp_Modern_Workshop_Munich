@@ -24,9 +24,9 @@ int main()
         //main_accumulate();
         //main_algorithms();
         //main_allocator();
-        main_any();
+        //main_any();
         //main_argument_dependent_name_lookup();
-        //main_array();
+       // main_array();
         //main_array_decay();
         //main_attributes();
        // main_auto();
@@ -52,7 +52,7 @@ int main()
         //main_expected();
         //main_explicit_keyword();
        // main_folding();
-        //main_functional_programming();
+       // main_functional_programming();
         //main_functional_programming_legacy();
         //main_functional_programming_alternate();
         //main_generate();
@@ -86,7 +86,7 @@ int main()
         //main_source_location();
         //main_sso();
         //main_static_assert();
-        //main_string_view();
+        main_string_view();
         //main_structured_binding();
         //main_templates_class_basics_01();
         //main_templates_class_basics_02();

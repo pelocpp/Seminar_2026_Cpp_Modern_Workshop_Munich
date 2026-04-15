@@ -15,6 +15,8 @@ namespace StandardAttributes {
 
     static void test_01()
     {
+        discard_test();   // printf 
+
         int result = discard_test();
 
         // another call to discard_test:

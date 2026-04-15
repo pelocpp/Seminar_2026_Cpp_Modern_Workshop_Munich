@@ -599,3 +599,135 @@ std::expected:   Monadic interface
 
 C++  17 / 20:   Module Concept.
 
+// =====================================
+
+Static vs. dynamic Polymorphism ( Modern Alternatives )
+-------------------------------------------------------
+
+Example
+
+std::variant
+
+STL:  Container   // std::vector,  std::list, ...
+
+                Homogenous Containers
+
+Java, C#:       Heterogenous Container
+
+             Java:  Universal Base Class "Object"
+
+             ArrayList list;   // Object   // int: Wrapper: Integer
+
+C++ and Heterogenous Container ????
+
+Type Erasure:  std::any,   std::variant,  std::function
+
+std::variant:  MOstly:  Stack
+
+std::any:      Heap (larger object)
+
+
+Example:
+
+
+Bookshop:
+
+a) Classic:
+
+   Interface
+
+   std::vector<std::shared_ptr<IMedia>>;
+
+            for (const auto& media : m_stock) {
+
+                total += media->getPrice() * media->getCount();
+
+                // -> INDIRECT CALL
+            }
+
+b) Modern  
+
+Books, CDs, DVD, BlueRay, Magazin (paper)....
+
+Differences:
+
+   std::variant
+
+   std::visit
+
+   Generic Lambda
+
+   Concepts 
+
+                   std::visit(
+                    [&](const auto& element) {
+                        price = element.getPrice();  
+                        count = element.getCount();
+                    },
+                    media
+                );
+
+                // .   DIRECT CALL
+
+"Inheritace is (not) Bad"   ::   Functional Programming
+
+In the modern scenario I can use EVERY class type:
+
+Into a Variant:   Copy 
+
+((pack1 op pack2) op ...) op packN
+
+((pack1 + pack2) + ...) + packN
+
+((1 + 2) + ...) + 5
+
+
+Whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+==================================================
+
+std::array  or Classic C Arrays ???
+
+===> std::array   Usually we don't know the size:
+
+
+
+std:::list,  std::vector
+
+
+std::array: knows the LENGTh !!!!!!!!!!!!!!!!!!
+
+int numbers[10];
+
+func(numbers);   // Length is LOST
+
+std::span
+
+=====================
+
+const char* cp = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+Where is this string located in my program ????
+
+Where is this string NOT located in my program ???? HEAP !!!
+
+std::string :  Mostly ... All (most) strings are lying
+              on the Heap.
+
+std::string_view sv;
+
+std::string_view sv { "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" };
+
+"Non Owning Container"   ==> std::span  //  std::string_view
+
+
+std::string_view   // NO Heap
+std::initializer_list  // No HEAP
+
+
+
+
+scanf   // #define 
+
+s_scanf
+

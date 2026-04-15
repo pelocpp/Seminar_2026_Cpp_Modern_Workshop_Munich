@@ -21,13 +21,32 @@ namespace Folding_Seminar {
 
             std::println(">>> {}", n);
         }
+    }
 
+    template <typename ... TArgs> // types pack
+    void transportEx(TArgs ... args) {  // parameter pack, pack them
+
+        // Folding Syntax:
+
+       // std::println(">>> {}", args1), std::println(">>> {}", args2), std::println(">>> {}", args3);
+
+        // Folding: Operator:  +, - , ,
+
+        (  std::println(">>> {}", args) ,  ... );
+
+    }
+
+    template <typename ... TArgs> // types pack
+    void transportExEx(TArgs ... args) {  // parameter pack, pack them
+
+        // int sum = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10;
+        auto result = (... + args);
 
     }
 
     void test_transport_01()
     {
-        transport( 1, 2, 3, 4, 5 );  // pack them
+        transportExEx( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 );  // pack them
     }
 
     class DoSomething
@@ -323,7 +342,7 @@ void main_folding()
 
     using namespace Folding_Seminar;
 
-    test_transport();
+    test_transport_01();
     return;
 
     test_01();

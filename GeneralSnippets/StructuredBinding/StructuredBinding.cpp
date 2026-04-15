@@ -30,7 +30,8 @@ namespace StructuredBinding {
     {
         auto [quotient, remainder] { divide_remainder(20, 3) };
 
-        std::println("16 / 3 is {} with a remainder of {}", quotient, remainder);
+        std::println("16 / 3 is {} with a remainder of {}",
+            quotient, remainder);
     }
 
     static void test_03()

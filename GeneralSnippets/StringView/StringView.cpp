@@ -16,7 +16,7 @@ namespace StringViewDemonstration {
         char ch{ sv[0] };
     }
 
-    static void test_02()
+    static void test_02()   // BAD Example
     {
         std::string s{ "AAAAAAAAAAAAAAAAAAAAAAAAAAAA" };
 

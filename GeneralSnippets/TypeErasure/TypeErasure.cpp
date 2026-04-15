@@ -299,6 +299,7 @@ namespace BookStoreUsingDynamicPolymorphism {
             double total{};
 
             for (const auto& media : m_stock) {
+
                 total += media->getPrice() * media->getCount();
             }
 
@@ -403,7 +404,7 @@ namespace BookStoreUsingDynamicPolymorphism {
 
 namespace BookStoreUsingTypeErasure {
 
-    class Book
+    class Book  //  NO BASE INTERFACE
     {
     private:
         std::string m_author;
@@ -421,6 +422,7 @@ namespace BookStoreUsingTypeErasure {
         const std::string& getAuthor() const { return m_author; }
         const std::string& getTitle() const { return m_title; }
 
+        // wait :)
         double getPrice() const { return m_price; }
         std::size_t getCount() const { return m_count; }
     };
@@ -443,16 +445,19 @@ namespace BookStoreUsingTypeErasure {
         const std::string& getTitle() const { return m_title; }
         const std::string& getDirector() const { return m_director; }
 
+        // how can I assure the correct / expected interface ???
         double getPrice() const { return m_price; }
         std::size_t getCount() const { return m_count; }
     };
 
     template<typename T>
-    concept MediaConcept = requires (const T & m)
+    concept MediaConcept = requires (const T& m)
     {
         { m.getPrice() } -> std::same_as<double>;
         { m.getCount() } -> std::same_as<std::size_t>;
     };
+
+
 
     template <typename ... TMedia>
         requires (MediaConcept<TMedia> && ...)
@@ -460,7 +465,9 @@ namespace BookStoreUsingTypeErasure {
     {
     private:
         using StockType = std::variant<TMedia ...>;
+
         using Stock     = std::vector<StockType>;
+
         using StockList = std::initializer_list<StockType>;
 
         Stock m_stock;
@@ -472,8 +479,8 @@ namespace BookStoreUsingTypeErasure {
         template <typename T>
             requires MediaConcept<T>
         void addMedia(const T& media) {
-            m_stock.push_back(StockType{ media });    // detailed notation
-            // m_stock.push_back(media);              // implicit type conversion (T => std::variant<T>)
+            // m_stock.push_back(StockType{ media });    // detailed notation
+            m_stock.push_back(media);              // implicit type conversion (T => std::variant<T>)
         }
 
         // or
@@ -578,7 +585,7 @@ namespace BookStoreUsingTypeErasure {
 
         using MyBookstore = Bookstore<Book, Movie>;
 
-        MyBookstore bookstore{
+        MyBookstore bookstore {
             cBook, movieBond, javaBook, cppBook, csharpBook, movieTarantino
         };
 

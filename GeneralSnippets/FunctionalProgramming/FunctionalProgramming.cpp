@@ -105,7 +105,7 @@ namespace FunctionalProgramming {
     {
         auto addFive = [](int b) {
             return add(5, b);  // partially applied: a = 5
-            };
+        };
 
         auto result{ addFive(3) };
 
@@ -118,7 +118,7 @@ namespace FunctionalProgramming {
     static auto partialAdd(int a) {
         return [a](int b) {
             return a + b;
-            };
+        };
     }
 
     static void functional_partial_application_02()
@@ -204,8 +204,8 @@ namespace FunctionalProgramming {
     static auto addCurried = [](auto a) {
         return [a](auto b) {
             return a + b;
-            };
         };
+    };
 
     static void functional_currying_regular()
     {
@@ -216,7 +216,7 @@ namespace FunctionalProgramming {
 
     static void functional_currying_01()
     {
-        auto result{ addCurried(5)(5) };
+        auto result{ addCurried(5) (5) };
 
         std::println("{} ", result);  // output: 10
     }
