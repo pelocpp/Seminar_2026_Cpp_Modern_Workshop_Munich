@@ -282,17 +282,320 @@ Macros .......  similiar
 
 =======================================
 
+How do I learn a pattern ???
+
+How do I explain a pattern?
+
+a) Image - UML
+
+b) Example: Conceptual Example
+
+c) Real-World Example // Best Practice Example
+
+d) Often:  Method 'clientCode'   
+
+   Wechsel // Change of Client code <=> Pattern related Code
+
+
+Adapter:
+
+JSON  
+XML
+
+Do I apply a Pattern:
+
+Real-World Question:
+
+A) To be honest:  One-Day Problem: Solve it fast :) No Pattern ...
+
+B) Could be occur more often: Go for a Pattern: takes more time ===> But HOPEFULLY with a "Return of Efforts" in the Future
+
+
+====================================================
+
+DTO:  Data Transfer Objects
+
+Observer:   COMMON Pattern  ===> Rather fast for this Pattern.
+
+Classic Flavour // Modern Flavour.
+
+=====================================================
+
+Adapter // Template Method // Proxy 
+
+
+Common:  3 Pattern: They deal with Method(s)
+
+==> Adapter
+
+        almost different Methods // functionality is SIMILAR // interface is incompatible
+
+==> Template Method
+
+        many similar objects with an almost similar common method
+
+==> Proxy
+
+        I'm going to own / use an object ..  extend functionality .. reuse of the "real" functionality
+
+        Also possible: I want to decide, whether i will call the target object in reality or NOT
+
+
+
+Check Permissions:
+
+Chain of Responsibility:
+
+Observer Pattern
+
+Wording:  Nomenclature
+
+A) Target Object: Holds data / has STATE:  Weather // Wetter Daten  // Aktien // Stock Data
+   This Data can change !!!
+
+   Subject
+
+B) Clients // Observer
+
+C) interaction: with register / unregister // attach // detach
 
 
 
 
 
+Template Method Pattern
+
+Example: Real-World  Tetris:
+
+Shapes:  7
+
+7 distinct Shapes ==> Doing - more or less - the SAME:
+
+Movement of ALL Shapes: 1 Method: Template Method.
+
+// ========================================================
+
+Observer:
+
+Subject
+
+            m_observers.remove(observer);   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            To remove something I must compare it with the existing elements in the container
+
+            operator ==   DOES NOT EXIST !!!
 
 
 
+   virtual void update(const std::string&) = 0;
+
+Alternative:
 
 
 
+    auto myUpdate = [] (const std::string& s) {
+       std::println("Observer: new message is available --> \"{}\"", m_messageFromSubject);
+    };
+
+    How can I Pass a Lambda to registerObserver:
+
+    One Solution:  std::function < void (const std::string&) >
 
 
+==================================================================
+
+RAII   Pattern
+
+Idiom:   Solves a specific problem:
+
+Resources:
+
+Sockets, FILE, SqlConnection, Mutex,
+
+a) open, attach, register:    
+
+b) close, detach, unregister     WE FORGET ...
+
+Idea:   We use a wrapper class / object around the resource:
+
+    OO:  constructor
+         destructor
+
+ {
+     wrapper object : constructor  // open, attach, register, ....
+
+     destructor: automatically     // close, detach, unregister    WE CANNOT FORGET ...
+ }
+
+
+
+2 Example: Real-World Example
+
+STL:  Concurrent Programming:
+
+std::mutex  m_mutex;
+
+m_mutex.lock();
+// critical section  // a) throw  b) unexpected loop break   a=b;
+m_mutex.unlock();    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+WE DO NOT USE std::mutex objects DIRECTLY
+
+
+std::mutex g_i_mutex; 
+ 
+void safe_increment(int iterations)
+{
+    const std::lock_guard<std::mutex> lock(g_i_mutex);
+
+    {
+        std::lock_guard guard{ g_i_mutex };  // automatically:  g_i_mutex.lock();
+
+    
+        while (iterations-- > 0)
+           g_i = g_i + 1;
+        std::cout << "thread #" << std::this_thread::get_id() << ", g_i: " << g_i << '\n';
+ 
+       // g_i_mutex is automatically released when lock goes out of scope
+    }
+}
+
+
+RAII =======> Accessing Resources (OS)
+
+FileSystem:
+
+
+Clipboard:
+
+
+=======================================================
+
+Visitor Pattern:
+
+a) Classic Flavour
+
+b) Modern: std::variant, constexpr, ...
+
+HTML  // Markdown
+
+Existing implementations: HTML  // Markdown
+
+=======================================================
+
+constexpr
+
+"constexpr" - Game
+
+=======================================================
+
+std::variant
+
+Excel // Google Sheets:
+
+Zelle  // Cell:
+
+String, int, float, Currency, Time, date
+
+
+
+Programming at Compile Time:
+
+constexpr
+
+Metaprogramming:  
+
+         decltype 
+         ==> use the 'using' keyword 
+         ==> Metaprogramming Library
+
+Java, C#: Reflection  (Runtime)
+
+C++ 26: Reflection (compile - time)
+
+======================================================
+
+C++ // Robust SW :
+
+Transporting data from A to B.
+
+Function Call:  Type Safe
+                // Arbitrary Number of Parameters 
+                // Distinct Types
+
+
+Feature: NOT: Core C++  // Generic Part: Template
+
+Bjarne Stroustrup
+Alexander Stepanov
+
+
+Folding.cpp
+-----------
+
+Variadic Templates:
+
+Parameter Packs.
+
+How to get the single values of a pack ???  (  up to C++ 23 )
+
+a) std::initializer_list
+
+   Constraint:  All elements must be of the same name
+
+b) Folding
+
+c) Manual & Recursion
+
+========================================
+
+Parameter Pack:
+
+   is a COMMA seperated list of values.
+
+einpacken  // to pack    // box
+
+    Syntax: ... IN FRONT of the pack name
+
+auspacken  // to unpack   // unbox
+
+    Syntax: ... Behind the pack name
+
+
+========================================
+
+
+std::initializer_list
+
+Full-blown STL Container: NOOOOOOOOOOOOOOOOOOOO
+
+Light-Weight:
+
+.begin(),
+.end(),
+.size()
+
+=================================================
+
+https://github.com/pelocpp/cpp_concurrency/blob/master/Programs/Logger/Logger.h
+
+=================================================
+
+A) Variadic Templates: TRANSPORTING DATA
+
+B) How: By Copy, By reference ???
+
+   Perfect: By Reference  // NOT: By Copy
+
+   if a named Object is passed:  By Reference ... Copy 
+   if an unnamed Object is passed:  By Reference ... Move // Fast 
+
+=================================================
+
+std::expected:   Monadic interface 
+
+=================================================
+
+C++  17 / 20:   Module Concept.
 

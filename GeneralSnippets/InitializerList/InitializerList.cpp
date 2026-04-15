@@ -34,11 +34,15 @@ namespace InitializerList {
     static void test_01() {
 
         // testing functions expecting lists in function call
-        int sum = adder({ 1, 2, 3, 4, 5 });
+        
+        int sum = adder( { 1, 2, 3, 4, 5, 6, 7 } );
+        
         std::cout << sum << std::endl;
 
         print({ 1, 2, 3, 4, 5 });
     }
+
+
 
     // =================================================================================
 

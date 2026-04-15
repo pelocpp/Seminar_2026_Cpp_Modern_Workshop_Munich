@@ -24,7 +24,7 @@ int main()
         //main_accumulate();
         //main_algorithms();
         //main_allocator();
-        //main_any();
+        main_any();
         //main_argument_dependent_name_lookup();
         //main_array();
         //main_array_decay();
@@ -51,13 +51,13 @@ int main()
         //main_exception_safety();
         //main_expected();
         //main_explicit_keyword();
-        //main_folding();
+       // main_folding();
         //main_functional_programming();
         //main_functional_programming_legacy();
         //main_functional_programming_alternate();
         //main_generate();
         // main_generic_functions();
-        //main_initializer_list();
+       // main_initializer_list();
         //main_input_output_streams();  
         //main_invoke();
         //main_lambdas();
@@ -69,9 +69,9 @@ int main()
         //main_metaprogramming_02(); 
         //main_modularized_standard_library(); 
         //main_modules();
-        main_move_semantics();
-        //main_optional();
-        //main_perfect_forwarding();
+        //main_move_semantics();
+       // main_optional();
+      //  main_perfect_forwarding();
         //main_placement_new();
         //main_println();
         //main_raii();
@@ -105,7 +105,7 @@ int main()
         //main_variadic_templates_working_on_every_argument();
         //main_variadic_templates_sum_of_sums();
         //main_variadic_templates_mixins();
-        //main_variant();
+       // main_variant();
         //main_virtual_base_class_destructor();
         //main_virtual_override_final();
         //main_weak_pointer();

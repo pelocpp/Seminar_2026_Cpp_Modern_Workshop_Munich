@@ -2,6 +2,11 @@
 // Variant.cpp // std::variant
 // =====================================================================================
 
+module;
+
+#include <variant>   // precompiled headers
+#include <print>
+
 module modern_cpp:variant;
 
 namespace VariantDemo {
@@ -109,13 +114,48 @@ namespace VariantDemo {
 
     // -------------------------------------------------------------------
 
+    // primary template
+    template <typename T>
+    struct my_remove_reference {
+        using type = T;
+    };
+
+    // template specialization
+    template <typename T>
+    struct my_remove_reference<T&> {
+        using type = T;
+    };
+
+
+
     static void test_04() {
 
         std::variant<int, double, std::string> v{ 123 };
 
         // using a generic visitor (matching all types in the variant)
         auto visitor = [](const auto& elem) {
-            std::println("{}", elem);
+
+            //std::vector<int> numbers;
+            //std::vector<int>::iterator pos = numbers.begin();
+
+            using ElemType = decltype (elem);
+            using ElemTypeWithoutRef = my_remove_reference<ElemType>::type;
+            using ElemTypeWithoutRefAndConst = std::remove_const<ElemTypeWithoutRef>::type;
+
+            if constexpr( std::is_same<ElemTypeWithoutRefAndConst, int>::value == true) {
+                std::println("INT {}", elem);
+            }
+            else if constexpr (std::is_same<ElemTypeWithoutRefAndConst, double>::value == true) {
+                std::println("double {}", elem);
+            }
+            else if constexpr (std::is_same<ElemTypeWithoutRefAndConst, std::string>::value == true) {
+                std::println("std::string {}", elem);
+                std::println("Lendgth: {}", elem.size());
+            }
+            else
+            {
+                std::println("UNKNOWN {}", elem);
+            }
         };
 
         std::visit(visitor, v);
@@ -337,17 +377,17 @@ void main_variant()
 {
     using namespace VariantDemo;
 
-    test_01();
-    test_02();
-    test_03();
+    //test_01();
+    //test_02();
+    //test_03();
     test_04();
-    test_05();
-    test_06();
-    test_07();
-    test_08();
-    test_09();
-    test_10();
-    test_11();
+    //test_05();
+    //test_06();
+    //test_07();
+    //test_08();
+    //test_09();
+    //test_10();
+    //test_11();
 }
 
 // =====================================================================================

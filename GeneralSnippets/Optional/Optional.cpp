@@ -158,9 +158,9 @@ namespace OptionalExamples {
 
     static void test_01_optional_monadic()
     {
-        std::optional<int> n{ 123 };
+        //std::optional<int> n{ 123 };
         // or
-        // std::optional<int> n{ std::nullopt };
+        std::optional<int> n{ std::nullopt };
 
         auto result = n.and_then([](auto x) /*-> std::optional<std::string>*/ {
             if (x == 123) {

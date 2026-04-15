@@ -8,6 +8,91 @@ module;
 
 module modern_cpp:folding;
 
+
+namespace Folding_Seminar {
+
+    template <typename ... TArgs> // types pack
+        // requires
+    void transport(TArgs ... args) {  // parameter pack, pack them
+
+        auto list = { args ... }; // unpack
+
+        for (auto n : list) {
+
+            std::println(">>> {}", n);
+        }
+
+
+    }
+
+    void test_transport_01()
+    {
+        transport( 1, 2, 3, 4, 5 );  // pack them
+    }
+
+    class DoSomething
+    {
+    private:
+        int m_var1;
+        int m_var2;
+        int m_var3;
+
+    public:
+        DoSomething() : m_var1{}, m_var2{}, m_var3{} {
+            std::cout << "c'tor()" << std::endl;
+        }
+
+        DoSomething(int n) : m_var1{ n }, m_var2{}, m_var3{} {
+            std::cout << "c'tor(int)" << std::endl;
+        }
+
+        DoSomething(int n, int m) : m_var1{ n }, m_var2{ m }, m_var3{} {
+            std::cout << "c'tor(int, int)" << std::endl;
+        }
+
+        DoSomething(int n, int m, int k) : m_var1{ n }, m_var2{ m }, m_var3{ k } {
+            std::cout << "c'tor(int, int, int)" << std::endl;
+        }
+
+        friend std::ostream& operator<< (std::ostream&, const DoSomething&);
+    };
+
+    std::ostream& operator<< (std::ostream& os, const DoSomething& obj) {
+        os
+            << "var1: " << obj.m_var1
+            << ", var2: " << obj.m_var2
+            << ", var3: " << obj.m_var3;
+
+        return os;
+    }
+
+    template <typename T, typename ... TArgs>
+    std::unique_ptr<T> my_make_unique( TArgs ... args) {  // pack them
+
+        std::unique_ptr<T> ptr{ new T{ args ... } }; // unpack
+        return ptr;
+    }
+
+    template <typename T, typename ... TArgs>
+    std::unique_ptr<T> my_make_unique_perfect(TArgs&& ... args) {  // pack them
+
+        std::unique_ptr<T> ptr{ new T{  std::forward<TArgs>(args) ...  } }; // unpack
+        return ptr;
+    }
+
+    // Real World use Case
+    void test_transport()
+    {
+        //std::unique_ptr<DoSomething> ptr = 
+        //    std::make_unique<DoSomething>(1, 2, 3);
+
+        int n = 1;
+
+      std::unique_ptr<DoSomething> ptr = 
+          my_make_unique_perfect<DoSomething>(n, 2, 3);
+    }
+}
+
 namespace Folding {
 
     /* folding examples: introduction
@@ -235,6 +320,11 @@ namespace Folding {
 void main_folding()
 {
     using namespace Folding;
+
+    using namespace Folding_Seminar;
+
+    test_transport();
+    return;
 
     test_01();
     test_02();

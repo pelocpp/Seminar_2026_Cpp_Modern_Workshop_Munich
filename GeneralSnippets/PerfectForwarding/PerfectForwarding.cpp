@@ -32,9 +32,9 @@ namespace PerfectForwarding {
 
         int n{ 123 };
 
-        forwarding(n);
+        forwarding(n);    // named
 
-        forwarding(456);
+        forwarding(456);  // unnamed
     }
 
     static void test_forwardingPerfect() {
@@ -55,7 +55,7 @@ namespace PerfectForwarding {
 
         // T obj1 = std::forward<T>(arg1);
         // vs
-        T obj1 = arg1;
+        T obj1 = std::forward<T>(arg1);
         std::println("[{}]", arg1);
 
         U obj2 = std::forward<U>(arg2);
@@ -66,6 +66,7 @@ namespace PerfectForwarding {
     {
         std::string s{ "DEF" };
 
+        //      tmp. String,     named String
         foo(std::string{ "ABC" }, s);
     }
 }
